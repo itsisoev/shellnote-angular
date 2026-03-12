@@ -1,0 +1,27 @@
+<div class="shell-window">
+  <div class="shell-window__body">
+
+    <div class="shell-window__history">
+      @for (line of history(); track $index) {
+        <div class="shell-window__line">
+          <span class="shell-window__prompt">{{ line.prompt }}</span>
+          <span class="shell-window__output">{{ line.output }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="shell-window__input-row">
+      <span class="shell-window__prompt">~/gis $</span>
+      <input
+        class="shell-window__input"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="type a command..."
+        [(ngModel)]="input"
+        (keyup.enter)="onEnter()"
+      />
+    </div>
+
+  </div>
+</div>

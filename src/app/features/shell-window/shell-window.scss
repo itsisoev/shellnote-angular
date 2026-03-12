@@ -1,0 +1,61 @@
+.shell-window {
+  width: 100%;
+  height: 70vh;
+  background-color: var(--bg-terminal);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+
+
+  &__body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__history {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  &__line {
+    display: flex;
+    gap: 10px;
+    line-height: var(--line-height);
+  }
+
+  &__prompt {
+    color: var(--accent);
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  &__output {
+    color: var(--text-white);
+  }
+
+  &__input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-base);
+    caret-color: var(--cursor);
+
+    &::placeholder {
+      color: var(--text-muted);
+    }
+  }
+}

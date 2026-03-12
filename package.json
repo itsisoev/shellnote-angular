@@ -1,6 +1,7 @@
 {
   "name": "shellnote-angular",
   "version": "0.0.0",
+  "author": "itsisoev",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
